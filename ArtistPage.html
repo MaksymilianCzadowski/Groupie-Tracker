@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/ArtistPage.css">
+<<<<<<< HEAD
+    type="text/javascript"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    
+    <style type="text/css">
+        #map {
+            /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+            height: 400px;
+        }
+    </style>
+=======
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+>>>>>>> 5748d32db898dfae67952ab16a38deb0d6769b3c
+    <style>
+        /* Scrollbar width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Scrollbar Track */
+        ::-webkit-scrollbar-track {
+            background: #605F5E;
+            border-radius: 10px;
+        }
+
+        /* Scrollbar Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #EF233C;
+            border-radius: 10px;
+        }
+
+        /* Scrollbar Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d6031b;
+            border-radius: 10px;
+        }
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    </style>
+</head>
+
+<body>
+    <div class="navbarre">
+        <div class="nav2">
+            <a style="text-decoration:none" href="groupie-tracker">
+                <div class="title">
+                    <a style="text-decoration:none" href="/groupie-tracker"><h1>Artist</h1></a>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="info">
+        <p class="Title">{{.Name}}</p>
+        <img src="{{.Image}}">
+        <p>Members :{{range .Members}} {{.}}, {{end}}</p>
+        <p>Création : {{.CreationDate}}</p>
+        <p>1er album : {{.FirstAlbum}}</p>
+        <div id="artists" class="row">
+            <div class="col" id="{{.ID}}" name="{{.ID}}">
+                {{ range $key, $value := .Relations }}
+                <p>{{$key}}: {{range $value}} {{.}}. {{end}}</p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    <div id="map" style="width: auto; height: 300px;"></div> 
+   {{.src}}
+ 
+    </body>
+</html>

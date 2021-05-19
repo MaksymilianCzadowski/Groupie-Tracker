@@ -1,0 +1,12 @@
+backend :
+https://golang.org/doc/
+https://blog.alexellis.io/golang-json-api-client/
+https://golang.org/doc/articles/wiki/
+https://developers.google.com/maps?hl=fr
+https://stackoverflow.com/questions/3078084/can-i-provide-addresses-instead-of-latitude-and-longitude-to-google-maps
+
+frontend :
+https://coolors.co/
+https://www.w3schools.com/html/default.asp
+https://codepen.io/
+https://freefrontend.com/css-code-examples/#sitemap-input
